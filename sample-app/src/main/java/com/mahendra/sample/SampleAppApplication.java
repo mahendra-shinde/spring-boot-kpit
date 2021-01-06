@@ -16,7 +16,8 @@ public class SampleAppApplication {
 	}
 	
 	@Bean
-	@LoadBalanced
+	/// Find the given service on EUREKA and forward request
+	@LoadBalanced 
 	public RestTemplate template() {
 		return new RestTemplate();
 	}

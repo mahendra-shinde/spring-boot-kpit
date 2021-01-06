@@ -17,9 +17,13 @@ public class HomeController {
 		String from = "USD";
 		String to="INR";
 		Double amount=1000D;
-		
+		// @LoadBalancer would translate this "http://currency-service/convert..."
+		// Into "http://localhost:9000/convert..."
 		String result = template.getForObject("http://currency-service/convert?from="+from+"&to="+to+"&amount="+amount,String.class);
-		return result;
 		
+		return result;	
 	}
+	
+	
 }
+

@@ -17,6 +17,7 @@ public class ConvertorController {
 		else if(fromCurrency.equalsIgnoreCase("inr") && toCurrency.equalsIgnoreCase("usd")) {
 			amt = amount / 74.3D;
 		}
+		System.out.println("Processing request to convert "+amount+" into "+toCurrency+" Currency");
 		return " "+amt;
 	}
 }
